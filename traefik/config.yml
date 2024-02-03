@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: /ssl/foo.lan/cert.pem
+      keyFile: /ssl/foo.lan/key.pem
