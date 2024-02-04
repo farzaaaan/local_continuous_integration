@@ -42,6 +42,9 @@ services:
       - traefik.http.routers.gitea_route.tls=true
       - traefik.http.services.gitea_service.loadbalancer.server.port=3000
       - traefik.docker.network=traefik_public
+      - traefik.http.routers.gitea_route_http.entrypoints=web
+      - traefik.http.routers.gitea_route_http.rule=Host(`${GITEA_DOMAIN}`)
+      - traefik.http.routers.gitea_route_http.service=gitea_service
   gitea-cache:
     container_name: gitea-cache
     image: redis:6-alpine

@@ -10,7 +10,7 @@ services:
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
       ## Forces redirection of incoming requests from `web` to `websecure` entrypoint. https://doc.traefik.io/traefik/routing/entrypoints/#redirection
-      - --entrypoints.web.http.redirections.entryPoint.to=websecure
+      ## - --entrypoints.web.http.redirections.entryPoint.to=websecure
       # Docker provider configuration
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
